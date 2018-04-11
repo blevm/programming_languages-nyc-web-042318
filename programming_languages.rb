@@ -49,6 +49,15 @@ def reformat_languages(languages)
       end
     end
   end
+  languages.each do |style, language|
+    language.each do |language, type|
+      type.each do |type, type_value|
+        if (languages_in_order[language][:style]).include?(style) === false
+          (languages_in_order[language][:style]).push(style)
+        end
+      end
+    end
+  end
   return languages_in_order
 end
 
