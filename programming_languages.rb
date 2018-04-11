@@ -45,6 +45,7 @@ def reformat_languages(languages)
       end
     (languages_in_order[language][:style]) << style
     end
+    (languages_in_order[language][:style]) << style
   end
   return languages_in_order
 end
