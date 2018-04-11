@@ -45,7 +45,7 @@ def reformat_languages(languages)
           languages_in_order[language][:style] ||= Array.new
         end
       end
-        (languages_in_order[language][:style]) << style
+        (languages_in_order[language][:style]).push(style)
     end
   end
   return languages_in_order
