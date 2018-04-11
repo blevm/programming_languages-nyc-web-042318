@@ -44,8 +44,8 @@ def reformat_languages(languages)
         if languages_in_order[language][:style] = nil
           languages_in_order[language][:style] = Array.new
         end
+                (languages_in_order[language][:style]) << style
       end
-        (languages_in_order[language][:style]) << style
     end
   end
   return languages_in_order
