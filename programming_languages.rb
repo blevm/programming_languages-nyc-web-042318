@@ -43,10 +43,8 @@ def reformat_languages(languages)
         languages_in_order[language] = {type => type_value}
         languages_in_order[language][:style] = Array.new
         (languages_in_order[language][:style]) << style
+        (languages_in_order[language][:style]).push(style) unless (languages_in_order[language][:style]).include?(style)
       end
-    end
-    if languages_in_order[language][:style].include?(style) == false
-    (languages_in_order[language][:style]) << style
     end
   end
   return languages_in_order
